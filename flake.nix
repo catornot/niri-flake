@@ -368,6 +368,7 @@
           docs-html = html-docs.make-docs (settings.type-with html-docs.settings-fmt);
           settings-module = settings.module;
           settings = settings.settings;
+          render = settings.render;
           actions = nixpkgs.lib.mergeAttrsList (
             map (name: {
               ${name} = self.lib.kdl.magic-leaf name;
