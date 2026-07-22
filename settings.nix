@@ -3150,6 +3150,9 @@
         };
       };
     };
+
+  settings = (settings.type-with docs.settings-fmt);
+
   fake-docs =
     {
       fmt-date,

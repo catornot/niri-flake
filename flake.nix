@@ -367,6 +367,7 @@
           docs-markdown = docs.make-docs (settings.fake-docs { inherit fmt-date fmt-time; });
           docs-html = html-docs.make-docs (settings.type-with html-docs.settings-fmt);
           settings-module = settings.module;
+          settings = settings.settings;
           memo-binds = nixpkgs.lib.pipe (binds "${inputs.niri-unstable}/niri-config/src/binds.rs") [
             (map (bind: "  \"${bind.name}\""))
             (builtins.concatStringsSep "\n")
